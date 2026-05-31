@@ -1,0 +1,12 @@
+import { defineRouting } from "next-intl/routing";
+
+export const routing = defineRouting({
+  locales: ["en", "hu"],
+  defaultLocale: "hu",
+  // pathnames: {
+  //   "/": "/",
+  //   "/pathnames": {
+  //     hu: "/utnevek",
+  //   },
+  // },
+});

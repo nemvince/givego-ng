@@ -1,0 +1,78 @@
+{
+  "auth": {
+    "login": {
+      "welcomeBack": "Üdv újra!",
+      "loginToAccount": "Jelentkezz be a GiveGo fiókodba",
+      "email": {
+        "label": "E-mail cím",
+        "placeholder": "gipsz.jakab@givego.hu",
+        "invalid": "Érvénytelen e-mail cím"
+      },
+      "password": {
+        "label": "Jelszó",
+        "tooShort": "A jelszónak legalább 8 karakter hosszúnak kell lennie"
+      },
+      "forgotPassword": "Elfelejtetted a jelszavad?",
+      "submit": "Bejelentkezés",
+      "orContinueWith": "Vagy folytasd ezzel",
+      "google": "Google",
+      "googleSr": "Bejelentkezés Google-fiókkal",
+      "passkey": "Jelszókulcs",
+      "passkeySr": "Bejelentkezés jelszókulccsal",
+      "noAccount": "Nincs még fiókod?",
+      "signUp": "Regisztráció",
+      "termsAgreement": "A folytatás gombra kattintva elfogadod a <terms>Felhasználási Feltételeket</terms> és az <privacy>Adatvédelmi Szabályzatot</privacy>.",
+      "errors": {
+        "emailNotVerified": "Az e-mail-cím nincs ellenőrizve, ellenőrizze a beérkező leveleket",
+        "invalidCredentials": "Érvénytelen hitelesítési adatok",
+        "tooManyRequests": "Túl sokszor próbálkozott, várjon egy kicsit",
+        "unknown": "Ismeretlen hiba történt, próbálja újra később"
+      },
+      "notAvailable": "Ez jelenleg nem elérhető"
+    }
+  },
+  "error": {
+    "description": "<p>Sajnos hiba történt.</p><p>Megpróbálhatod <retry>újratölteni az oldalt</retry>, amelyet éppen látogattál.</p>",
+    "title": "Valami hiba történt!"
+  },
+  "homePage": {
+    "description": "Ez egy egyszerű példa, amely bemutatja a <code>next-intl</code> használatát a Next.js App Routerrel. Próbáld megváltoztatni a nyelvet a jobb felső sarokban, és figyeld meg, hogyan változik a tartalom.",
+    "title": "next-intl példa"
+  },
+  "localeLayout": {
+    "title": "next-intl példa"
+  },
+  "localeSwitcher": {
+    "label": "Nyelv módosítása",
+    "locale": "{locale, select, de {Német} en {Angol} other {Ismeretlen}}"
+  },
+  "manifest": {
+    "name": "next-intl példa"
+  },
+  "navigation": {
+    "home": "Kezdőlap",
+    "pathnames": "Útvonalak"
+  },
+  "notFoundPage": {
+    "description": "Kérjük, ellenőrizd a böngésző címsorát, vagy használd a navigációt egy ismert oldal eléréséhez.",
+    "title": "Az oldal nem található"
+  },
+  "pageLayout": {
+    "links": {
+      "docs": {
+        "description": "Tudj meg többet a next-intl használatáról a hivatalos dokumentációban.",
+        "href": "https://next-intl.dev",
+        "title": "Dokumentáció"
+      },
+      "source": {
+        "description": "Böngészd a példa forráskódját a GitHubon.",
+        "href": "https://github.com/amannn/next-intl/tree/main/examples/example-app-router",
+        "title": "Forráskód"
+      }
+    }
+  },
+  "pathnamesPage": {
+    "description": "<p>Az útvonalak is lokalizálva vannak.</p><p>Ha az alapértelmezett angol nyelvet használod, ezen az oldalon a <code>/en/pathnames</code> URL-t fogod látni a böngésző címsorában.</p><p>Ha németre váltasz, az URL is lokalizálódik (<code>/de/pfadnamen</code>).</p>",
+    "title": "Útvonalak"
+  }
+}
