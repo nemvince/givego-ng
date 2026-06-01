@@ -1,5 +1,15 @@
 "use client";
 
+import { zodResolver } from "@hookform/resolvers/zod";
+import { FingerprintIcon, GoogleLogoIcon } from "@phosphor-icons/react/ssr";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { type ComponentProps, type ReactNode, useEffect } from "react";
+import { Controller, useForm } from "react-hook-form";
+import { toast } from "sonner";
+import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -17,15 +27,6 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { authClient } from "@/lib/auth/client";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { FingerprintIcon, GoogleLogoIcon } from "@phosphor-icons/react/ssr";
-import { useTranslations } from "next-intl";
-import Image from "next/image";
-import Link from "next/link";
-import { type ComponentProps, type ReactNode, useEffect } from "react";
-import { Controller, useForm } from "react-hook-form";
-import { toast } from "sonner";
-import { z } from "zod";
 
 const AuthButton = (
   props: {
@@ -53,6 +54,7 @@ const AuthButton = (
 
 export const LoginForm = () => {
   const t = useTranslations("auth.login");
+  const router = useRouter();
 
   const loginFormSchema = z.object({
     email: z.email(t("email.invalid")),
@@ -81,11 +83,11 @@ export const LoginForm = () => {
       autoFill: true,
       fetchOptions: {
         onSuccess() {
-          // TODO: Redirect
+          router.push("/");
         },
       },
     });
-  }, []);
+  }, [router]);
 
   const onPasswordLogin = async (data: LoginFormData) => {
     const { error } = await authClient.signIn.email({
@@ -94,7 +96,7 @@ export const LoginForm = () => {
     });
 
     if (!error) {
-      // TODO: Redirect
+      router.push("/");
       return;
     }
 
@@ -119,7 +121,7 @@ export const LoginForm = () => {
     const { error } = await authClient.signIn.passkey();
 
     if (!error) {
-      // TODO: Redirect
+      router.push("/");
       return;
     }
 

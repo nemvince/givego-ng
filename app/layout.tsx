@@ -1,10 +1,10 @@
 import "@/app/globals.css";
+import { Geist_Mono, IBM_Plex_Sans } from "next/font/google";
+import type { ReactNode } from "react";
 import { ThemeProvider } from "@/components/theme/provider";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
-import { Geist_Mono, IBM_Plex_Sans } from "next/font/google";
-import type { ReactNode } from "react";
 
 const ibmPlexSans = IBM_Plex_Sans({
   subsets: ["latin"],

@@ -29,6 +29,97 @@
         "unknown": "Ismeretlen hiba történt, próbálja újra később"
       },
       "notAvailable": "Ez jelenleg nem elérhető"
+    },
+    "register": {
+      "createAccount": "Fiók létrehozása",
+      "getStarted": "Kezdd el a GiveGo használatát",
+      "name": {
+        "label": "Név",
+        "placeholder": "Kovács János"
+      },
+      "email": {
+        "label": "E-mail cím",
+        "placeholder": "kovacs.janos@example.hu",
+        "invalid": "Érvénytelen e-mail cím"
+      },
+      "password": {
+        "label": "Jelszó",
+        "tooShort": "A jelszónak legalább 8 karakter hosszúnak kell lennie"
+      },
+      "confirmPassword": {
+        "label": "Jelszó megerősítése",
+        "mismatch": "A jelszavak nem egyeznek"
+      },
+      "submit": "Fiók létrehozása",
+      "orContinueWith": "Vagy folytasd ezzel",
+      "google": "Google",
+      "googleSr": "Regisztráció Google-fiókkal",
+      "hasAccount": "Már van fiókod?",
+      "logIn": "Bejelentkezés",
+      "termsAgreement": "A folytatás gombra kattintva elfogadod a <terms>Felhasználási Feltételeket</terms> és az <privacy>Adatvédelmi Szabályzatot</privacy>.",
+      "otpSent": "Ellenőrző kódot küldtünk az e-mail címedre",
+      "otpVerified": "E-mail megerősítve!",
+      "verifyEmail": "E-mail cím megerősítése",
+      "otpDescription": "Add meg a 6 jegyű kódot, amit a(z) {email} címre küldtünk",
+      "verify": "Megerősítés",
+      "verifying": "Megerősítés...",
+      "redirecting": "Átirányítás...",
+      "noCode": "Nem kaptál kódot?",
+      "resend": "Újraküldés",
+      "errors": {
+        "emailAlreadyExists": "Már létezik fiók ezzel az e-mail címmel",
+        "tooManyRequests": "Túl sokszor próbálkozott, várjon egy kicsit",
+        "unknown": "Ismeretlen hiba történt, próbálja újra később"
+      },
+      "complete": {
+        "step": "Lépés {current} / {total}",
+        "accountType": {
+          "title": "Milyen típusú fiókot szeretnél?",
+          "description": "Válaszd ki, hogyan szeretnéd használni a GiveGo-t",
+          "person": {
+            "label": "Magánszemély",
+            "description": "Személyes használatra — önkéntesség, adományozás, hatásod követése"
+          },
+          "organization": {
+            "label": "Szervezet",
+            "description": "Jótékonysági szervezetek, nonprofitok és cégek kampánykezeléséhez"
+          }
+        },
+        "orgDetails": {
+          "title": "Szervezet adatai",
+          "description": "Mesélj a szervezetedről",
+          "orgName": {
+            "label": "Szervezet neve",
+            "placeholder": "Acme Alapítvány"
+          },
+          "registrationNumber": {
+            "label": "Nyilvántartási szám",
+            "placeholder": "12345678"
+          },
+          "contactName": {
+            "label": "Kapcsolattartó neve",
+            "placeholder": "Kovács János"
+          },
+          "contactPhone": {
+            "label": "Kapcsolattartó telefonszáma",
+            "placeholder": "+36 1 234 5678"
+          },
+          "website": {
+            "label": "Weboldal (opcionális)",
+            "placeholder": "https://example.hu"
+          }
+        },
+        "passkey": {
+          "title": "Fiókod biztosítása",
+          "description": "A jelszókulcsokkal ujjlenyomattal, arccal vagy eszköz PIN-kóddal jelentkezhetsz be — jelszó nélkül. Ez a legbiztonságosabb bejelentkezési mód.",
+          "setup": "Jelszókulcs beállítása",
+          "skip": "Kihagyás most",
+          "success": "Jelszókulcs hozzáadva!"
+        },
+        "continue": "Folytatás",
+        "error": "Valami hiba történt. Kérlek, próbáld újra.",
+        "finish": "Kezdés"
+      }
     }
   },
   "error": {

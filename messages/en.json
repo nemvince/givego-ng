@@ -29,6 +29,98 @@
       "noAccount": "Don't have an account?",
       "signUp": "Sign up",
       "termsAgreement": "By clicking continue, you agree to our <terms>Terms of Service</terms> and <privacy>Privacy Policy</privacy>."
+    },
+    "register": {
+      "createAccount": "Create an account",
+      "getStarted": "Get started with GiveGo",
+      "name": {
+        "label": "Name",
+        "placeholder": "John Doe"
+      },
+      "notAvailable": "This is not available right now",
+      "email": {
+        "label": "Email",
+        "placeholder": "john.doe@example.com",
+        "invalid": "Invalid email address"
+      },
+      "password": {
+        "label": "Password",
+        "tooShort": "Password must be at least 8 characters"
+      },
+      "confirmPassword": {
+        "label": "Confirm password",
+        "mismatch": "Passwords do not match"
+      },
+      "submit": "Create account",
+      "orContinueWith": "Or continue with",
+      "google": "Google",
+      "googleSr": "Sign up with Google",
+      "hasAccount": "Already have an account?",
+      "logIn": "Log in",
+      "termsAgreement": "By clicking continue, you agree to our <terms>Terms of Service</terms> and <privacy>Privacy Policy</privacy>.",
+      "otpSent": "We sent a verification code to your email",
+      "otpVerified": "Email verified!",
+      "verifyEmail": "Verify your email",
+      "otpDescription": "Enter the 6-digit code sent to {email}",
+      "verify": "Verify",
+      "verifying": "Verifying...",
+      "redirecting": "Redirecting...",
+      "noCode": "Didn't receive the code?",
+      "resend": "Resend",
+      "errors": {
+        "emailAlreadyExists": "An account with this email already exists",
+        "tooManyRequests": "Too many requests, wait a bit",
+        "unknown": "An unknown error has occurred, try again later"
+      },
+      "complete": {
+        "step": "Step {current} of {total}",
+        "accountType": {
+          "title": "What type of account?",
+          "description": "Choose how you want to use GiveGo",
+          "person": {
+            "label": "Individual",
+            "description": "For personal use — volunteer, donate, and track your impact"
+          },
+          "organization": {
+            "label": "Organization",
+            "description": "For charities, nonprofits, and companies managing campaigns"
+          }
+        },
+        "orgDetails": {
+          "title": "Organization details",
+          "description": "Tell us about your organization",
+          "orgName": {
+            "label": "Organization name",
+            "placeholder": "Acme Foundation"
+          },
+          "registrationNumber": {
+            "label": "Registration number",
+            "placeholder": "12345678"
+          },
+          "contactName": {
+            "label": "Contact holder name",
+            "placeholder": "Jane Smith"
+          },
+          "contactPhone": {
+            "label": "Contact phone",
+            "placeholder": "+36 1 234 5678"
+          },
+          "website": {
+            "label": "Website (optional)",
+            "placeholder": "https://example.org"
+          }
+        },
+        "passkey": {
+          "title": "Secure your account",
+          "description": "Passkeys let you sign in with your fingerprint, face, or device PIN — no password needed. It's the most secure way to log in.",
+          "setup": "Set up passkey",
+          "skip": "Skip for now",
+          "success": "Passkey added!"
+        },
+        "continue": "Continue",
+        "error": "Something went wrong. Please try again.",
+        "finish": "Get started"
+      }
     }
   },
   "error": {
