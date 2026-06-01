@@ -1,9 +1,7 @@
-import { railway } from "@t3-oss/env-core/presets-zod";
 import { createEnv } from "@t3-oss/env-nextjs";
 import { z } from "zod";
 
 export const env = createEnv({
-  extends: [railway()],
   emptyStringAsUndefined: true,
   server: {
     DATABASE_URL: z.url(),

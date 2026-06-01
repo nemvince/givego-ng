@@ -7,15 +7,8 @@ import { db } from "@/database";
 import { authSchema } from "@/database/schema/auth";
 import { env } from "@/lib/env";
 
-const getBaseURL = () => {
-  if (env.RAILWAY_PUBLIC_DOMAIN) {
-    return env.RAILWAY_PUBLIC_DOMAIN;
-  }
-  return env.BETTER_AUTH_URL;
-};
-
 export const auth = betterAuth({
-  baseURL: getBaseURL(),
+  baseURL: env.BETTER_AUTH_URL,
   secret: env.BETTER_AUTH_SECRET,
   appName: "GiveGo",
   database: drizzleAdapter(db, {
