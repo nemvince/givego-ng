@@ -28,7 +28,6 @@ import { authClient } from "@/lib/auth/client";
 type AccountType = "person" | "organization";
 
 const ORG_STEP = 2;
-const PASSKEY_STEP = 3;
 
 export const RegisterCompleteForm = () => {
   const t = useTranslations("auth.register.complete");
@@ -38,6 +37,7 @@ export const RegisterCompleteForm = () => {
   const [accountType, setAccountType] = useState<AccountType | null>(null);
 
   const totalSteps = accountType === "organization" ? 3 : 2;
+  const passkeyStep = totalSteps;
 
   const orgFormSchema = z.object({
     orgName: z.string().min(1),
@@ -69,7 +69,7 @@ export const RegisterCompleteForm = () => {
         return;
       }
     }
-    setStep(type === "organization" ? ORG_STEP : PASSKEY_STEP);
+    setStep(type === "organization" ? ORG_STEP : passkeyStep);
   };
 
   const onSubmitOrgDetails = async (data: OrgFormData) => {
@@ -81,7 +81,7 @@ export const RegisterCompleteForm = () => {
       toast.error(result.error ?? t("error"));
       return;
     }
-    setStep(PASSKEY_STEP);
+    setStep(passkeyStep);
   };
 
   const onSetupPasskey = async () => {
@@ -337,7 +337,7 @@ export const RegisterCompleteForm = () => {
   }
 
   // Step 3 (or 2 for person): Passkey setup
-  if (step === PASSKEY_STEP) {
+  if (step === passkeyStep) {
     return (
       <Card className="overflow-hidden p-0">
         <CardContent className="grid grid-cols-1 p-0 md:grid-cols-2">
