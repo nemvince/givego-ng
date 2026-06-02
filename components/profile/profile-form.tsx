@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import type { Passkey, Profile, UserSettings } from "@/database/types";
 import type { Session } from "@/lib/auth/types";
 import { AccountSection } from "./account-section";
 import { BasicInfoSection } from "./basic-info-section";
@@ -9,7 +10,6 @@ import { DangerZoneSection } from "./danger-zone-section";
 import { PreferencesSection } from "./preferences-section";
 import { ProfileDetailsSection } from "./profile-details-section";
 import { SecuritySection } from "./security-section";
-import type { Passkey, Profile, UserSettings } from "./types";
 
 export function ProfileForm({
   session,

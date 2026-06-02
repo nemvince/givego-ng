@@ -13,8 +13,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import type { Passkey } from "@/database/types";
 import { authClient } from "@/lib/auth/client";
-import type { Passkey } from "./types";
 
 export function SecuritySection({ passkeys }: { passkeys: Passkey[] }) {
   const t = useTranslations("profile.security");

@@ -280,7 +280,11 @@ export function Navbar({
               >
                 {t("login")}
               </Button>
-              <Button nativeButton={false} render={<Link href="/auth/register" />} size="sm">
+              <Button
+                nativeButton={false}
+                render={<Link href="/auth/register" />}
+                size="sm"
+              >
                 {t("register")}
               </Button>
             </>

@@ -9,8 +9,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Field, FieldLabel } from "@/components/ui/field";
 import { Switch } from "@/components/ui/switch";
+import type { UserSettings } from "@/database/types";
 import { usePathname, useRouter } from "@/lib/i18n/navigation";
-import type { UserSettings } from "./types";
 
 export function PreferencesSection({
   settings,
