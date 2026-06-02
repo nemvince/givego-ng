@@ -165,5 +165,196 @@
   "pathnamesPage": {
     "description": "<p>Az útvonalak is lokalizálva vannak.</p><p>Ha az alapértelmezett angol nyelvet használod, ezen az oldalon a <code>/en/pathnames</code> URL-t fogod látni a böngésző címsorában.</p><p>Ha németre váltasz, az URL is lokalizálódik (<code>/de/pfadnamen</code>).</p>",
     "title": "Útvonalak"
+  },
+  "navbar": {
+    "home": "Kezdőlap",
+    "events": "Események",
+    "organizations": "Szervezetek",
+    "searchPlaceholder": "Események keresése...",
+    "login": "Bejelentkezés",
+    "register": "Regisztráció",
+    "profile": "Profil",
+    "signOut": "Kijelentkezés",
+    "theme": {
+      "label": "Téma",
+      "light": "Világos",
+      "dark": "Sötét",
+      "system": "Rendszer"
+    },
+    "language": {
+      "label": "Nyelv",
+      "en": "English",
+      "hu": "Magyar"
+    },
+    "userMenu": {
+      "label": "Felhasználói menü"
+    },
+    "mobileNav": {
+      "open": "Navigációs menü megnyitása",
+      "close": "Navigációs menü bezárása",
+      "title": "Navigáció"
+    }
+  },
+  "notifications": {
+    "title": "Értesítések",
+    "empty": "Még nincsenek értesítések",
+    "viewAll": "Összes értesítés megtekintése"
+  },
+  "footer": {
+    "copyright": "© {year} GiveGo",
+    "terms": "Felhasználási feltételek",
+    "privacy": "Adatvédelmi szabályzat",
+    "about": "Rólunk"
+  },
+  "events": {
+    "title": "Események",
+    "comingSoon": "Az eseménylista hamarosan elérhető lesz."
+  },
+  "organizations": {
+    "title": "Szervezetek",
+    "comingSoon": "A szervezetlista hamarosan elérhető lesz."
+  },
+  "terms": {
+    "title": "Felhasználási feltételek",
+    "placeholder": "A Felhasználási feltételek tartalma hamarosan elérhető lesz."
+  },
+  "privacy": {
+    "title": "Adatvédelmi szabályzat",
+    "placeholder": "Az Adatvédelmi szabályzat tartalma hamarosan elérhető lesz."
+  },
+  "about": {
+    "title": "A GiveGo-ról",
+    "placeholder": "A GiveGo-ról szóló tartalom hamarosan elérhető lesz."
+  },
+  "profile": {
+    "tabs": {
+      "basicInfo": "Alapadatok",
+      "profileDetails": "Profil részletek",
+      "account": "Fiók",
+      "security": "Biztonság",
+      "preferences": "Beállítások",
+      "dangerZone": "Veszélyzóna"
+    },
+    "basicInfo": {
+      "title": "Alapinformációk",
+      "name": { "label": "Megjelenített név", "placeholder": "A neved" },
+      "email": {
+        "label": "E-mail",
+        "changeHint": "Az e-mail címet a Fiók fülön módosíthatod"
+      },
+      "accountType": {
+        "label": "Fiók típusa",
+        "person": "Magánszemély",
+        "organization": "Szervezet"
+      },
+      "emailVerified": "E-mail megerősítve",
+      "emailNotVerified": "Nincs megerősítve",
+      "resendVerification": "Megerősítő e-mail újraküldése",
+      "verifySent": "Megerősítő e-mail elküldve",
+      "save": "Mentés",
+      "saving": "Mentés...",
+      "saved": "Elmentve!"
+    },
+    "profileDetails": {
+      "title": "Profil részletek",
+      "description": {
+        "label": "Bemutatkozás",
+        "placeholder": "Mesélj magadról..."
+      },
+      "website": { "label": "Weboldal", "placeholder": "https://" },
+      "contactName": {
+        "label": "Kapcsolattartó neve",
+        "placeholder": "Teljes neved"
+      },
+      "contactPhone": {
+        "label": "Kapcsolattartó telefonszáma",
+        "placeholder": "+36 1 234 5678"
+      },
+      "orgName": {
+        "label": "Szervezet neve",
+        "placeholder": "Acme Alapítvány"
+      },
+      "registrationNumber": {
+        "label": "Nyilvántartási szám",
+        "placeholder": "12345678"
+      },
+      "showContactName": "Kapcsolattartó nevének megjelenítése a profilon",
+      "showContactPhone": "Kapcsolattartó telefonszámának megjelenítése a profilon",
+      "avatarComingSoon": "Profilkép feltöltés hamarosan",
+      "save": "Mentés",
+      "saving": "Mentés...",
+      "saved": "Elmentve!"
+    },
+    "account": {
+      "title": "Fiók",
+      "email": {
+        "title": "E-mail cím módosítása",
+        "currentEmail": "Jelenlegi e-mail",
+        "newEmail": { "label": "Új e-mail", "placeholder": "uj@email.com" },
+        "requestChange": "Módosítás kérése",
+        "enterOtp": "Add meg a(z) {email} címre küldött ellenőrző kódot",
+        "verify": "E-mail megerősítése",
+        "verifying": "Megerősítés...",
+        "success": "E-mail sikeresen módosítva",
+        "error": "Az e-mail módosítása sikertelen"
+      },
+      "password": {
+        "title": "Jelszó módosítása",
+        "current": { "label": "Jelenlegi jelszó" },
+        "new": { "label": "Új jelszó" },
+        "confirm": {
+          "label": "Új jelszó megerősítése",
+          "mismatch": "A jelszavak nem egyeznek"
+        },
+        "submit": "Jelszó módosítása",
+        "success": "Jelszó sikeresen módosítva",
+        "error": "A jelszó módosítása sikertelen"
+      },
+      "google": {
+        "title": "Google-fiók összekapcsolása",
+        "description": "Kapcsold össze a Google-fiókodat a gyorsabb bejelentkezéshez",
+        "notAvailable": "Hamarosan"
+      }
+    },
+    "security": {
+      "title": "Jelszókulcsok",
+      "description": "A jelszókulcsokkal ujjlenyomattal, arccal vagy eszköz PIN-kóddal jelentkezhetsz be — jelszó nélkül.",
+      "addPasskey": "Jelszókulcs hozzáadása",
+      "noPasskeys": "Még nincsenek jelszókulcsok beállítva",
+      "unnamedPasskey": "Névtelen jelszókulcs",
+      "unknownDate": "Ismeretlen dátum",
+      "deletePasskey": "Jelszókulcs törlése",
+      "confirmDelete": "Eltávolítod ezt a jelszókulcsot?",
+      "renameSuccess": "Jelszókulcs átnevezve",
+      "deleteSuccess": "Jelszókulcs eltávolítva",
+      "addSuccess": "Jelszókulcs hozzáadva!"
+    },
+    "preferences": {
+      "title": "Beállítások",
+      "notifications": {
+        "title": "Értesítések",
+        "email": "E-mail értesítések",
+        "inApp": "Alkalmazáson belüli értesítések"
+      },
+      "appearance": {
+        "title": "Megjelenés",
+        "label": "Téma"
+      },
+      "language": {
+        "title": "Nyelv",
+        "label": "Megjelenítési nyelv"
+      }
+    },
+    "dangerZone": {
+      "title": "Veszélyzóna",
+      "description": "Visszafordíthatatlan műveletek. Kérjük, körültekintően járj el.",
+      "deleteAccount": "Fiók törlése",
+      "deleteTitle": "Törlöd a fiókodat?",
+      "deleteDescription": "A fiókod deaktiválásra kerül. Az adataidat jogi okokból megőrizzük. Az adatok végleges törléséhez lépj kapcsolatba az ügyfélszolgálattal.",
+      "confirmText": "Írd be a(z) {name} nevet a megerősítéshez:",
+      "cancel": "Mégse",
+      "delete": "Fiók törlése",
+      "success": "Fiók törölve. Viszlát!"
+    }
   }
 }

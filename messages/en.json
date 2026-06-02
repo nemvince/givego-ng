@@ -166,5 +166,196 @@
   "pathnamesPage": {
     "description": "<p>The pathnames are internationalized too.</p><p>If you're using the default language English, you'll see <code>/en/pathnames</code> in the browser address bar on this page.</p><p>If you change the locale to German, the URL is localized accordingly (<code>/de/pfadnamen</code>).</p>",
     "title": "Pathnames"
+  },
+  "navbar": {
+    "home": "Home",
+    "events": "Events",
+    "organizations": "Organizations",
+    "searchPlaceholder": "Search events...",
+    "login": "Login",
+    "register": "Register",
+    "profile": "Profile",
+    "signOut": "Sign out",
+    "theme": {
+      "label": "Theme",
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    },
+    "language": {
+      "label": "Language",
+      "en": "English",
+      "hu": "Magyar"
+    },
+    "userMenu": {
+      "label": "User menu"
+    },
+    "mobileNav": {
+      "open": "Open navigation menu",
+      "close": "Close navigation menu",
+      "title": "Navigation"
+    }
+  },
+  "notifications": {
+    "title": "Notifications",
+    "empty": "No notifications yet",
+    "viewAll": "View all notifications"
+  },
+  "footer": {
+    "copyright": "© {year} GiveGo",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "about": "About"
+  },
+  "events": {
+    "title": "Events",
+    "comingSoon": "Event listings will be available soon."
+  },
+  "organizations": {
+    "title": "Organizations",
+    "comingSoon": "Organization listings will be available soon."
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "placeholder": "Terms of Service content will be available soon."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "placeholder": "Privacy Policy content will be available soon."
+  },
+  "about": {
+    "title": "About GiveGo",
+    "placeholder": "About GiveGo content will be available soon."
+  },
+  "profile": {
+    "tabs": {
+      "basicInfo": "Basic Info",
+      "profileDetails": "Profile Details",
+      "account": "Account",
+      "security": "Security",
+      "preferences": "Preferences",
+      "dangerZone": "Danger Zone"
+    },
+    "basicInfo": {
+      "title": "Basic Information",
+      "name": { "label": "Display name", "placeholder": "Your name" },
+      "email": {
+        "label": "Email",
+        "changeHint": "Change your email in the Account tab"
+      },
+      "accountType": {
+        "label": "Account type",
+        "person": "Individual",
+        "organization": "Organization"
+      },
+      "emailVerified": "Email verified",
+      "emailNotVerified": "Not verified",
+      "resendVerification": "Resend verification email",
+      "verifySent": "Verification email sent",
+      "save": "Save changes",
+      "saving": "Saving...",
+      "saved": "Saved!"
+    },
+    "profileDetails": {
+      "title": "Profile Details",
+      "description": {
+        "label": "Bio",
+        "placeholder": "Tell others about yourself..."
+      },
+      "website": { "label": "Website", "placeholder": "https://" },
+      "contactName": {
+        "label": "Contact name",
+        "placeholder": "Your full name"
+      },
+      "contactPhone": {
+        "label": "Contact phone",
+        "placeholder": "+36 1 234 5678"
+      },
+      "orgName": {
+        "label": "Organization name",
+        "placeholder": "Acme Foundation"
+      },
+      "registrationNumber": {
+        "label": "Registration number",
+        "placeholder": "12345678"
+      },
+      "showContactName": "Show contact name on profile",
+      "showContactPhone": "Show contact phone on profile",
+      "avatarComingSoon": "Avatar upload coming soon",
+      "save": "Save changes",
+      "saving": "Saving...",
+      "saved": "Saved!"
+    },
+    "account": {
+      "title": "Account",
+      "email": {
+        "title": "Change Email",
+        "currentEmail": "Current email",
+        "newEmail": { "label": "New email", "placeholder": "new@email.com" },
+        "requestChange": "Request change",
+        "enterOtp": "Enter the verification code sent to {email}",
+        "verify": "Verify email",
+        "verifying": "Verifying...",
+        "success": "Email changed successfully",
+        "error": "Failed to change email"
+      },
+      "password": {
+        "title": "Change Password",
+        "current": { "label": "Current password" },
+        "new": { "label": "New password" },
+        "confirm": {
+          "label": "Confirm new password",
+          "mismatch": "Passwords do not match"
+        },
+        "submit": "Change password",
+        "success": "Password changed successfully",
+        "error": "Failed to change password"
+      },
+      "google": {
+        "title": "Connect Google Account",
+        "description": "Link your Google account for faster sign-in",
+        "notAvailable": "Coming soon"
+      }
+    },
+    "security": {
+      "title": "Passkeys",
+      "description": "Passkeys let you sign in with your fingerprint, face, or device PIN — no password needed.",
+      "addPasskey": "Add passkey",
+      "noPasskeys": "No passkeys configured yet",
+      "unnamedPasskey": "Unnamed Passkey",
+      "unknownDate": "Unknown date",
+      "deletePasskey": "Delete passkey",
+      "confirmDelete": "Remove this passkey?",
+      "renameSuccess": "Passkey renamed",
+      "deleteSuccess": "Passkey removed",
+      "addSuccess": "Passkey added!"
+    },
+    "preferences": {
+      "title": "Preferences",
+      "notifications": {
+        "title": "Notifications",
+        "email": "Email notifications",
+        "inApp": "In-app notifications"
+      },
+      "appearance": {
+        "title": "Appearance",
+        "label": "Theme"
+      },
+      "language": {
+        "title": "Language",
+        "label": "Display language"
+      }
+    },
+    "dangerZone": {
+      "title": "Danger Zone",
+      "description": "Irreversible actions. Please proceed with caution.",
+      "deleteAccount": "Delete account",
+      "deleteTitle": "Delete your account?",
+      "deleteDescription": "Your account will be deactivated. All your data will be retained for legal purposes. To permanently delete your data, contact support.",
+      "confirmText": "Type {name} to confirm:",
+      "cancel": "Cancel",
+      "delete": "Delete my account",
+      "success": "Account deleted. Goodbye!"
+    }
   }
 }

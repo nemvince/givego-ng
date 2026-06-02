@@ -53,6 +53,10 @@
     "start": "next start",
     "typecheck": "tsc --noEmit",
     "check": "ultracite check",
-    "fix": "ultracite fix"
+    "fix": "ultracite fix",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "bun run database/migrate.ts",
+    "db:seed": "bun run database/seed.ts",
+    "db:studio": "drizzle-kit studio"
   }
 }
