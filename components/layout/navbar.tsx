@@ -84,7 +84,7 @@ export function Navbar({
   };
 
   return (
-    <header className="border-b bg-background/80 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur-sm">
       <div className="mx-auto flex w-full max-w-5xl items-center gap-4 px-4 py-2.5">
         <div className="md:hidden">
           <Sheet onOpenChange={setMobileOpen} open={mobileOpen}>
@@ -142,8 +142,8 @@ export function Navbar({
           </Sheet>
         </div>
 
-        <Link className="font-bold text-lg" href="/">
-          GiveGo
+        <Link className="font-bold font-serif text-lg" href="/">
+          Give<span className="text-primary">&</span>Go
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">
