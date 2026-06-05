@@ -222,6 +222,22 @@ export function StepReview({ form, tags, onStepBack }: StepReviewProps) {
             <dd>{formatDate(values.startDate)}</dd>
             <dt className="font-medium text-muted-foreground">End date</dt>
             <dd>{formatDate(values.endDate)}</dd>
+            {!values.isRecurring && values.startTime && (
+              <>
+                <dt className="font-medium text-muted-foreground">
+                  {t("startTime")}
+                </dt>
+                <dd>{values.startTime}</dd>
+              </>
+            )}
+            {!values.isRecurring && values.endTime && (
+              <>
+                <dt className="font-medium text-muted-foreground">
+                  {t("endTime")}
+                </dt>
+                <dd>{values.endTime}</dd>
+              </>
+            )}
             <dt className="font-medium text-muted-foreground">Recurrence</dt>
             <dd>
               {values.isRecurring ? (

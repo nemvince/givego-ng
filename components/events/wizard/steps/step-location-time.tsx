@@ -163,18 +163,45 @@ export function StepLocationTime({ form }: StepLocationTimeProps) {
         />
       )}
 
+      <Controller
+        control={form.control}
+        name="isRecurring"
+        render={({ field }) => (
+          <Field>
+            <div className="flex items-center gap-3">
+              <Switch
+                checked={field.value}
+                onCheckedChange={(checked) => {
+                  form.setValue("isRecurring", checked, { shouldDirty: true });
+                  if (checked) {
+                    form.setValue("timeslots", [{ start: "", end: "" }], {
+                      shouldDirty: true,
+                    });
+                  } else {
+                    form.setValue("weekdays", [], { shouldDirty: true });
+                    form.setValue("timeslots", [], { shouldDirty: true });
+                  }
+                }}
+              />
+              <FieldLabel>{t("isRecurringLabel")}</FieldLabel>
+            </div>
+          </Field>
+        )}
+      />
+
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <Controller
           control={form.control}
           name="startDate"
           render={({ field, fieldState }) => (
             <Field data-invalid={fieldState.invalid}>
-              <FieldLabel>{t("startDateLabel")}</FieldLabel>
+              <FieldLabel>
+                {isRecurring ? t("dateRangeStartLabel") : t("startDateLabel")}
+              </FieldLabel>
               <DatePicker
                 label={t("pickDate")}
                 onChange={(date) => {
                   field.onChange(date);
-                  // also update the end date if it's before the new start date
                   const endDate = form.getValues("endDate");
                   if (
                     (endDate && date && endDate < date) ||
@@ -195,7 +222,9 @@ export function StepLocationTime({ form }: StepLocationTimeProps) {
           name="endDate"
           render={({ field, fieldState }) => (
             <Field data-invalid={fieldState.invalid}>
-              <FieldLabel>{t("endDateLabel")}</FieldLabel>
+              <FieldLabel>
+                {isRecurring ? t("dateRangeEndLabel") : t("endDateLabel")}
+              </FieldLabel>
               <DatePicker
                 label={t("pickDate")}
                 onChange={(date) => field.onChange(date)}
@@ -207,31 +236,48 @@ export function StepLocationTime({ form }: StepLocationTimeProps) {
         />
       </div>
 
-      <Controller
-        control={form.control}
-        name="isRecurring"
-        render={({ field }) => (
-          <Field>
-            <div className="flex items-center gap-3">
-              <Switch
-                checked={field.value}
-                onCheckedChange={(checked) => {
-                  form.setValue("isRecurring", checked, { shouldDirty: true });
-                  if (checked) {
-                    const currentTimeslots = form.getValues("timeslots") ?? [];
-                    if (currentTimeslots.length === 0) {
-                      form.setValue("timeslots", [{ start: "", end: "" }], {
-                        shouldDirty: true,
-                      });
-                    }
-                  }
-                }}
-              />
-              <FieldLabel>{t("isRecurringLabel")}</FieldLabel>
-            </div>
-          </Field>
-        )}
-      />
+      {!isRecurring && (
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <Controller
+            control={form.control}
+            name="startTime"
+            render={({ field, fieldState }) => (
+              <Field data-invalid={fieldState.invalid}>
+                <FieldLabel htmlFor="start-time">
+                  {t("startTimeLabel")}
+                </FieldLabel>
+                <Input
+                  {...field}
+                  aria-invalid={fieldState.invalid}
+                  id="start-time"
+                  type="time"
+                />
+                {fieldState.invalid && (
+                  <FieldError errors={[fieldState.error]} />
+                )}
+              </Field>
+            )}
+          />
+          <Controller
+            control={form.control}
+            name="endTime"
+            render={({ field, fieldState }) => (
+              <Field data-invalid={fieldState.invalid}>
+                <FieldLabel htmlFor="end-time">{t("endTimeLabel")}</FieldLabel>
+                <Input
+                  {...field}
+                  aria-invalid={fieldState.invalid}
+                  id="end-time"
+                  type="time"
+                />
+                {fieldState.invalid && (
+                  <FieldError errors={[fieldState.error]} />
+                )}
+              </Field>
+            )}
+          />
+        </div>
+      )}
 
       {isRecurring && (
         <Controller

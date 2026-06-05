@@ -306,6 +306,10 @@
         "endDateLabel": "End date",
         "pickDate": "Pick a date",
         "isRecurringLabel": "This is a recurring event",
+        "dateRangeStartLabel": "First day",
+        "dateRangeEndLabel": "Last day",
+        "startTimeLabel": "Start time",
+        "endTimeLabel": "End time",
         "weekdaysLabel": "Repeats on",
         "weekdays": {
           "mon": "Mon",
@@ -354,7 +358,9 @@
         "freeTextAddress": "Free-text address",
         "noVolunteerLimit": "No limit",
         "noMinVolunteers": "No minimum",
-        "noMaxVolunteers": "No maximum"
+        "noMaxVolunteers": "No maximum",
+        "startTime": "Start time",
+        "endTime": "End time"
       },
       "navigation": {
         "back": "Back",

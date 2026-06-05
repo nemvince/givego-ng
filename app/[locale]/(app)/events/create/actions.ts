@@ -35,6 +35,8 @@ const createEventSchema = z.object({
   startDate: z.date().optional(),
   endDate: z.date().optional(),
   isRecurring: z.boolean(),
+  startTime: z.string().optional(),
+  endTime: z.string().optional(),
   weekdays: z.array(z.number().int()).optional(),
   timeslots: z
     .array(z.object({ start: z.string(), end: z.string() }))
@@ -57,12 +59,23 @@ export async function createEvent(
     return { success: false, error: "Invalid data" };
   }
 
-  const { tagIds, weekdays, timeslots, ...eventData } = parsed.data;
+  const { tagIds, weekdays, timeslots, startTime, endTime, ...eventData } =
+    parsed.data;
 
   const rrule =
     eventData.isRecurring && weekdays && timeslots
       ? JSON.stringify({ weekdays, timeslots })
       : null;
+
+  const applyTime = (date: Date | undefined, time: string | undefined) => {
+    if (!(date && time)) {
+      return date;
+    }
+    const [h, m] = time.split(":").map(Number);
+    const result = new Date(date);
+    result.setHours(h ?? 0, m ?? 0, 0, 0);
+    return result;
+  };
 
   const result = await db.transaction(async (tx) => {
     const [inserted] = await tx
@@ -76,8 +89,8 @@ export async function createEvent(
         description: eventData.description,
         isRecurring: eventData.isRecurring,
         helpMode: eventData.helpMode,
-        startDate: eventData.startDate,
-        endDate: eventData.endDate,
+        startDate: applyTime(eventData.startDate, startTime),
+        endDate: applyTime(eventData.endDate, endTime),
         rrule,
         latitude: eventData.latitude ?? null,
         longitude: eventData.longitude ?? null,

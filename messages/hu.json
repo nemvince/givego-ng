@@ -305,6 +305,10 @@
         "endDateLabel": "Befejező dátum",
         "pickDate": "Válassz dátumot",
         "isRecurringLabel": "Ez egy ismétlődő esemény",
+        "dateRangeStartLabel": "Első nap",
+        "dateRangeEndLabel": "Utolsó nap",
+        "startTimeLabel": "Kezdés",
+        "endTimeLabel": "Befejezés",
         "weekdaysLabel": "Ismétlődik",
         "weekdays": {
           "mon": "Hé",
@@ -353,7 +357,9 @@
         "freeTextAddress": "Szabad szöveges cím",
         "noVolunteerLimit": "Nincs korlát",
         "noMinVolunteers": "Nincs minimum",
-        "noMaxVolunteers": "Nincs maximum"
+        "noMaxVolunteers": "Nincs maximum",
+        "startTime": "Kezdés",
+        "endTime": "Befejezés"
       },
       "navigation": {
         "back": "Vissza",
