@@ -64,7 +64,6 @@
     "db:generate": "drizzle-kit generate",
     "db:migrate": "bun run database/migrate.ts",
     "db:seed": "bun run database/seed.ts",
-    "db:studio": "drizzle-kit studio",
-    "cors:configure": "bun run scripts/configure-cors.ts"
+    "db:studio": "drizzle-kit studio"
   }
 }
