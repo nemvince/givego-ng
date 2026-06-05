@@ -127,8 +127,54 @@
     "title": "Valami hiba történt!"
   },
   "homePage": {
-    "description": "Ez egy egyszerű példa, amely bemutatja a <code>next-intl</code> használatát a Next.js App Routerrel. Próbáld megváltoztatni a nyelvet a jobb felső sarokban, és figyeld meg, hogyan változik a tartalom.",
-    "title": "next-intl példa"
+    "hero": {
+      "heading": "Segíts a <highlight>környezetedben</highlight> élőknek.",
+      "description": "A GiveGo segít a szervezőknek percek alatt közösségi eseményeket létrehozni — és lehetővé teszi, hogy az önkéntesek egy kattintással jelentkezzenek.",
+      "cta": "Esemény keresése"
+    },
+    "highlightedEvents": {
+      "label": "Hamarosan",
+      "heading": "Kiemelt események",
+      "browseAll": "Összes esemény böngészése"
+    },
+    "eventTile": {
+      "signedUp": "{count} jelentkezett",
+      "spotsLeft": "{count} hely maradt",
+      "signUp": "Jelentkezés"
+    },
+    "howItWorks": {
+      "label": "Így működik",
+      "heading": "A jó szándéktól a valódi hatásig, percek alatt.",
+      "step1": {
+        "title": "Fedezd fel a számodra fontos ügyeket",
+        "body": "Szűrj eseményeket ügy, helyszín és dátum szerint, hogy megtaláld azokat, amelyek illenek az időbeosztásodhoz és a szívedhez."
+      },
+      "step2": {
+        "title": "Jelentkezz egyetlen kattintással",
+        "body": "Nincs papírmunka, nincs oda-vissza. Foglald le a helyed azonnal, és kapj emlékeztetőket a nagy nap előtt."
+      },
+      "step3": {
+        "title": "Jelenj meg és érj el hatást",
+        "body": "Találkozz a szomszédaiddal, kövesd nyomon az önkéntes óráidat automatikusan, és lásd, ahogy a közösségi hatásod növekszik."
+      }
+    },
+    "organizerCta": {
+      "label": "Szervezőknek",
+      "heading": "Mozgósítsd a közösséged a felesleges munka nélkül.",
+      "description": "Legyél nonprofit szervezet, iskola, vagy egy szomszéd nagy ötlettel — a GiveGo mindent megad, amire szükséged van egy remek esemény megszervezéséhez, feltöltéséhez és lebonyolításához.",
+      "perk1": "Hozz létre eseményt 2 perc alatt",
+      "perk2": "Kezeld az önkéntes jelentkezéseket és emlékeztetőket",
+      "perk3": "Kövesd nyomon az órákat és a hatást automatikusan",
+      "cta": "Esemény létrehozása",
+      "card": {
+        "title": "Esemény varázsló",
+        "badge": "4 lépés",
+        "step1": "Alapinformációk",
+        "step2": "Helyszín és idő",
+        "step3": "Önkéntes beállítások",
+        "step4": "Áttekintés és beküldés"
+      }
+    }
   },
   "localeLayout": {
     "title": "next-intl példa"

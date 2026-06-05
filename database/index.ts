@@ -1,6 +1,6 @@
-import { env } from "@/lib/env";
 import { SQL } from "bun";
 import { drizzle } from "drizzle-orm/bun-sql";
+import { env } from "@/lib/env";
 
 let connection: SQL;
 

@@ -1,5 +1,5 @@
-import { env } from "@/lib/env";
 import { PutBucketCorsCommand, S3Client } from "@aws-sdk/client-s3";
+import { env } from "@/lib/env";
 
 const ALLOWED_ORIGINS = [env.BETTER_AUTH_URL];
 

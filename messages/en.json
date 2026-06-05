@@ -128,8 +128,54 @@
     "title": "Something went wrong!"
   },
   "homePage": {
-    "description": "This is a basic example that demonstrates the usage of <code>next-intl</code> with the Next.js App Router. Try changing the locale in the top right corner and see how the content changes.",
-    "title": "next-intl example"
+    "hero": {
+      "heading": "Show up for the <highlight>people</highlight> next door.",
+      "description": "Give&Go helps organizers create community events in minutes — and lets volunteers sign up in a single tap.",
+      "cta": "Find an event"
+    },
+    "highlightedEvents": {
+      "label": "Happening soon",
+      "heading": "Highlighted events",
+      "browseAll": "Browse all events"
+    },
+    "eventTile": {
+      "signedUp": "{count} signed up",
+      "spotsLeft": "{count} spots left",
+      "signUp": "Sign up"
+    },
+    "howItWorks": {
+      "label": "How it works",
+      "heading": "From good intentions to real impact in minutes.",
+      "step1": {
+        "title": "Discover causes you care about",
+        "body": "Filter events by cause, location, and date to find the ones that fit your schedule and your heart."
+      },
+      "step2": {
+        "title": "Sign up in a single tap",
+        "body": "No paperwork, no back-and-forth. Reserve your spot instantly and get reminders before the big day."
+      },
+      "step3": {
+        "title": "Show up and make an impact",
+        "body": "Meet your neighbors, log your hours automatically, and watch your community impact grow."
+      }
+    },
+    "organizerCta": {
+      "label": "For organizers",
+      "heading": "Rally your community without the busywork.",
+      "description": "Whether you're a nonprofit, a school, or a neighbor with a big idea, Give&Go gives you everything you need to organize, fill, and run a great event.",
+      "perk1": "Create an event in under 2 minutes",
+      "perk2": "Manage volunteer signups & reminders",
+      "perk3": "Track hours and impact automatically",
+      "cta": "Create an event",
+      "card": {
+        "title": "Event wizard",
+        "badge": "4 steps",
+        "step1": "Basic Info",
+        "step2": "Location & Time",
+        "step3": "Volunteers",
+        "step4": "Review & Submit"
+      }
+    }
   },
   "localeLayout": {
     "title": "next-intl example"
