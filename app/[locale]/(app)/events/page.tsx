@@ -1,3 +1,5 @@
+import { CalendarCheckIcon, PlusIcon } from "@phosphor-icons/react/ssr";
+import { getTranslations } from "next-intl/server";
 import { BreadcrumbTrail } from "@/components/layout/breadcrumb-trail";
 import { Button } from "@/components/ui/button";
 import {
@@ -10,8 +12,6 @@ import { db } from "@/database";
 import { events as eventsTable } from "@/database/schema/event";
 import { requireOrg } from "@/lib/auth/guards";
 import { Link } from "@/lib/i18n/navigation";
-import { CalendarCheckIcon, PlusIcon } from "@phosphor-icons/react/ssr";
-import { getTranslations } from "next-intl/server";
 
 export default async function EventsPage() {
   const t = await getTranslations("events");

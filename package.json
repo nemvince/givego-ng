@@ -6,6 +6,8 @@
   "dependencies": {
     "@base-ui/react": "^1.5.0",
     "@better-auth/passkey": "^1.6.13",
+    "@better-upload/client": "^3.0.19",
+    "@better-upload/server": "^3.0.19",
     "@hookform/resolvers": "^5.4.0",
     "@opennextjs/cloudflare": "^1.19.11",
     "@phosphor-icons/react": "^2.1.10",
@@ -25,6 +27,7 @@
     "react": "19.2.4",
     "react-day-picker": "^10.0.1",
     "react-dom": "19.2.4",
+    "react-dropzone": "^15.0.0",
     "react-hook-form": "^7.77.0",
     "react-leaflet": "^5.0.0",
     "react-resizable-panels": "^4.11.2",
