@@ -1,8 +1,8 @@
-import { cn } from "@/lib/utils";
 import type { UploadHookControl } from "@better-upload/client";
 import { SpinnerIcon, UploadIcon } from "@phosphor-icons/react";
 import { useId } from "react";
 import { useDropzone } from "react-dropzone";
+import { cn } from "@/lib/utils";
 
 type UploadDropzoneProps = {
   control: UploadHookControl<true>;
@@ -108,7 +108,7 @@ export function UploadDropzone({
         <div className="pointer-events-none absolute inset-0 rounded-lg">
           <div className="flex size-full flex-col items-center justify-center rounded-lg bg-accent dark:bg-accent/40">
             <div className="my-2">
-              <Upload className="size-6" />
+              <UploadIcon className="size-6" />
             </div>
 
             <p className="mt-3 font-semibold text-sm">Drop files here</p>
