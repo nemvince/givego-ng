@@ -26,6 +26,8 @@ const eventWizardObject = z.object({
   helpMode: z.enum(helpModeEnum.enumValues),
   minVolunteers: z.number().int().positive().nullable().optional(),
   maxVolunteers: z.number().int().positive().nullable().optional(),
+  galleryImageKeys: z.array(z.string()).optional(),
+  galleryMainImageKey: z.string().optional(),
 });
 
 export const eventWizardSchema = eventWizardObject

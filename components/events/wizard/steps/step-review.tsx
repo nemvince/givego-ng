@@ -1,11 +1,16 @@
 "use client";
 
+import { useUploadFiles } from "@better-upload/client";
 import { useTranslations } from "next-intl";
-import type { UseFormReturn } from "react-hook-form";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { Controller, type UseFormReturn } from "react-hook-form";
 import type { EventWizardData } from "@/components/events/wizard/schemas/event-wizard";
+import { GalleryImagePreview } from "@/components/events/wizard/steps/gallery-image-preview";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Field, FieldError, FieldLabel } from "@/components/ui/field";
+import { UploadDropzone } from "@/components/ui/upload-dropzone";
 
 const WEEKDAY_KEYS = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"] as const;
 
@@ -22,6 +27,93 @@ export function StepReview({ form, tags, onStepBack }: StepReviewProps) {
   const tWorkTypes = useTranslations("events.create.basicInfo.workTypes");
   const tHelpModes = useTranslations("events.create.volunteers.helpModes");
   const tWeekdays = useTranslations("events.create.locationTime.weekdays");
+
+  const [galleryFiles, setGalleryFiles] = useState<
+    { key: string; name: string; previewUrl: string }[]
+  >([]);
+  const blobUrlsRef = useRef<Set<string>>(new Set());
+
+  const revokeBlobUrl = useCallback((url: string) => {
+    URL.revokeObjectURL(url);
+    blobUrlsRef.current.delete(url);
+  }, []);
+
+  useEffect(() => {
+    const urls = blobUrlsRef.current;
+    return () => {
+      for (const url of urls) {
+        URL.revokeObjectURL(url);
+      }
+    };
+  }, []);
+
+  const imageUploader = useUploadFiles({
+    route: "images",
+    onUploadComplete: ({ files }) => {
+      const existingKeys = form.getValues("galleryImageKeys") ?? [];
+      const existingKeySet = new Set(existingKeys);
+
+      const addedFiles = files.filter(
+        (file) => !existingKeySet.has(file.objectInfo.key)
+      );
+      if (addedFiles.length === 0) {
+        return;
+      }
+
+      const newKeys = addedFiles.map((file) => file.objectInfo.key);
+      form.setValue("galleryImageKeys", [...existingKeys, ...newKeys]);
+
+      const newGalleryFiles = addedFiles.map((file) => ({
+        key: file.objectInfo.key,
+        name: file.name,
+        previewUrl: URL.createObjectURL(file.raw),
+      }));
+      for (const f of newGalleryFiles) {
+        blobUrlsRef.current.add(f.previewUrl);
+      }
+
+      setGalleryFiles((prev) => [...prev, ...newGalleryFiles]);
+
+      const mainKey = form.getValues("galleryMainImageKey");
+      if (!mainKey) {
+        form.setValue("galleryMainImageKey", newKeys[0]);
+      }
+    },
+    onError: (error) => {
+      form.setError("galleryImageKeys", {
+        message: error.message || "An error occurred.",
+      });
+    },
+  });
+
+  const handleRemoveImage = useCallback(
+    (key: string) => {
+      const file = galleryFiles.find((f) => f.key === key);
+      if (file) {
+        revokeBlobUrl(file.previewUrl);
+      }
+
+      const updated = galleryFiles.filter((f) => f.key !== key);
+      setGalleryFiles(updated);
+      form.setValue(
+        "galleryImageKeys",
+        updated.map((f) => f.key)
+      );
+
+      const mainKey = form.getValues("galleryMainImageKey");
+      if (mainKey === key) {
+        form.setValue("galleryMainImageKey", updated[0]?.key ?? undefined);
+      }
+    },
+    [galleryFiles, form, revokeBlobUrl]
+  );
+
+  const handleSetMainImage = useCallback(
+    (key: string) => {
+      form.setValue("galleryMainImageKey", key);
+    },
+    [form]
+  );
 
   const values = form.getValues();
   const selectedTags = tags.filter((tag) => values.tagIds.includes(tag.id));
@@ -190,11 +282,36 @@ export function StepReview({ form, tags, onStepBack }: StepReviewProps) {
 
       <Card>
         <CardContent>
-          <div className="flex flex-col items-center gap-2 text-center">
-            <p className="font-medium text-sm">{t("imageUpload")}</p>
-            <p className="text-muted-foreground text-sm">
-              {t("imagePlaceholder")}
-            </p>
+          <div className="flex flex-col gap-3">
+            <Controller
+              control={form.control}
+              name="galleryImageKeys"
+              render={({ fieldState }) => (
+                <Field data-invalid={fieldState.invalid}>
+                  <FieldLabel className="font-medium text-sm">
+                    {t("imageUpload")}
+                  </FieldLabel>
+                  <UploadDropzone
+                    accept="image/*"
+                    control={imageUploader.control}
+                    description={{
+                      maxFiles: 5,
+                      maxFileSize: "5MB",
+                      fileTypes: "JPEG, PNG, GIF",
+                    }}
+                  />
+                  {fieldState.invalid && (
+                    <FieldError errors={[fieldState.error]} />
+                  )}
+                </Field>
+              )}
+            />
+            <GalleryImagePreview
+              files={galleryFiles}
+              mainKey={form.getValues("galleryMainImageKey")}
+              onRemove={handleRemoveImage}
+              onSetMain={handleSetMainImage}
+            />
           </div>
         </CardContent>
       </Card>

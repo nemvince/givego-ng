@@ -72,6 +72,8 @@ export function EventWizard({ tags }: EventWizardProps) {
       helpMode: "personal",
       minVolunteers: null,
       maxVolunteers: null,
+      galleryImageKeys: [],
+      galleryMainImageKey: undefined,
     },
   });
 
