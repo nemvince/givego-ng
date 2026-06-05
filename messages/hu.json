@@ -372,6 +372,31 @@
         "minGreaterThanMax": "A minimum önkéntesek nem haladhatják meg a maximumot"
       },
       "success": "Esemény sikeresen létrehozva!"
+    },
+    "detail": {
+      "backToEvents": "Vissza az eseményekhez",
+      "date": "Dátum",
+      "time": "Időpont",
+      "activity": "Tevékenység",
+      "format": "Formátum",
+      "aboutEvent": "Az eseményről",
+      "tags": "Címkék",
+      "gallery": "Galéria",
+      "hostedBy": "Szervező",
+      "volunteerGoal": "Önkéntes cél",
+      "volunteerNeeds": "Az eseményhez legalább {min} és legfeljebb {max} önkéntesre van szükség.",
+      "noVolunteerLimit": "Nincs korlát",
+      "signUp": "Jelentkezés",
+      "alreadySignedUp": "Már jelentkeztél",
+      "loginToSignUp": "Jelentkezz be a jelentkezéshez",
+      "signingUp": "Jelentkezés...",
+      "signUpSuccess": "Sikeresen jelentkeztél!",
+      "signUpError": "Nem sikerült jelentkezni. Próbáld újra.",
+      "signUpFull": "Az esemény betelt.",
+      "signUpOwnEvent": "Nem jelentkezhetsz a saját eseményedre.",
+      "recurrence": "Ismétlődő esemény",
+      "signedUp": "{count} jelentkezett",
+      "spotsLeft": "{count} hely maradt"
     }
   },
   "organizations": {

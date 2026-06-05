@@ -373,6 +373,31 @@
         "minGreaterThanMax": "Minimum volunteers cannot exceed maximum"
       },
       "success": "Event created successfully!"
+    },
+    "detail": {
+      "backToEvents": "Back to events",
+      "date": "Date",
+      "time": "Time",
+      "activity": "Activity",
+      "format": "Format",
+      "aboutEvent": "About this event",
+      "tags": "Tags",
+      "gallery": "Gallery",
+      "hostedBy": "Hosted by",
+      "volunteerGoal": "Volunteer goal",
+      "volunteerNeeds": "This event needs at least {min} and can host up to {max} volunteers.",
+      "noVolunteerLimit": "No volunteer limit",
+      "signUp": "Sign up",
+      "alreadySignedUp": "You're signed up",
+      "loginToSignUp": "Log in to sign up",
+      "signingUp": "Signing up...",
+      "signUpSuccess": "You're signed up!",
+      "signUpError": "Could not sign up. Try again.",
+      "signUpFull": "This event is full.",
+      "signUpOwnEvent": "You can't sign up for your own event.",
+      "recurrence": "Recurring event",
+      "signedUp": "{count} signed up",
+      "spotsLeft": "{count} spots left"
     }
   },
   "organizations": {

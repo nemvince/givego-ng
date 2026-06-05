@@ -1,10 +1,10 @@
-import { env } from "@/lib/env";
 import {
   DeleteObjectsCommand,
   type DeleteObjectsRequest,
   ListObjectsV2Command,
   S3Client,
 } from "@aws-sdk/client-s3";
+import { env } from "@/lib/env";
 
 const client = new S3Client({
   region: env.BETTER_UPLOAD_REGION,

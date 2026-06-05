@@ -60,7 +60,7 @@ export function OrganizerCta() {
               <span className="font-semibold font-serif text-foreground text-lg">
                 {t("card.title")}
               </span>
-              <span className="rounded-full bg-accent/15 px-3 py-1 font-medium text-accent text-xs">
+              <span className="rounded-full bg-accent/15 px-3 py-1 font-medium text-muted-foreground text-xs">
                 {t("card.badge")}
               </span>
             </div>
