@@ -255,6 +255,42 @@
   "events": {
     "title": "Események",
     "comingSoon": "Az eseménylista hamarosan elérhető lesz.",
+    "browse": {
+      "hero": {
+        "label": "Találd meg a helyed",
+        "heading": "Találj egy eseményt, ami megéri az idődet",
+        "description": "Szűrj ügy, a számodra kedves munka típusa és a segítségnyújtás módja szerint. Minden eseményt egy ellenőrzött helyi szervező szervez."
+      },
+      "search": {
+        "placeholder": "Keresés ügy, helyszín, szervező szerint..."
+      },
+      "filters": {
+        "title": "Szűrők",
+        "cause": "Ügy",
+        "typeOfWork": "Munka típusa",
+        "format": "Formátum",
+        "other": "Egyéb",
+        "recurring": "Ismétlődő",
+        "spotsAvailable": "Van szabad hely",
+        "clearAll": "Összes törlése",
+        "resetFilters": "Szűrők alaphelyzetbe",
+        "closeFilters": "Szűrők bezárása"
+      },
+      "sort": {
+        "label": "Rendezés",
+        "soonest": "Legkorábbi",
+        "mostSpots": "Legtöbb szabad hely",
+        "mostPopular": "Legnépszerűbb"
+      },
+      "results": {
+        "count": "{count, plural, =1 {# esemény} other {# esemény}} találat",
+        "noResults": {
+          "title": "Egy esemény sem felel meg a szűrőknek",
+          "description": "Próbálj meg eltávolítani egy szűrőt vagy bővíteni a keresést, hogy több segítési lehetőséget találj.",
+          "clearButton": "Összes szűrő törlése"
+        }
+      }
+    },
     "create": {
       "title": "Esemény létrehozása",
       "stepIndicator": "Lépés {current} / {total}",

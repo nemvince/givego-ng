@@ -256,6 +256,42 @@
   "events": {
     "title": "Events",
     "comingSoon": "Event listings will be available soon.",
+    "browse": {
+      "hero": {
+        "label": "Find your fit",
+        "heading": "Find an event worth your time",
+        "description": "Filter by cause, the kind of work you enjoy, and how you want to help. Every event is run by a vetted local organizer."
+      },
+      "search": {
+        "placeholder": "Search by cause, place, organizer..."
+      },
+      "filters": {
+        "title": "Filters",
+        "cause": "Cause",
+        "typeOfWork": "Type of work",
+        "format": "Format",
+        "other": "Other",
+        "recurring": "Recurring",
+        "spotsAvailable": "Spots available",
+        "clearAll": "Clear all",
+        "resetFilters": "Reset filters",
+        "closeFilters": "Close filters"
+      },
+      "sort": {
+        "label": "Sort",
+        "soonest": "Soonest",
+        "mostSpots": "Most spots left",
+        "mostPopular": "Most popular"
+      },
+      "results": {
+        "count": "{count, plural, =1 {# event} other {# events}} found",
+        "noResults": {
+          "title": "No events match your filters",
+          "description": "Try removing a filter or broadening your search to discover more ways to help.",
+          "clearButton": "Clear all filters"
+        }
+      }
+    },
     "create": {
       "title": "Create Event",
       "stepIndicator": "Step {current} of {total}",
