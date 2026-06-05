@@ -2,7 +2,7 @@
 
 **GiveGo** is a community volunteering platform that helps organizers create and manage events, and lets volunteers discover causes, sign up in one tap, and track their impact.
 
-Built with Next.js 16, React 19, PostgreSQL, and deployed on Cloudflare via OpenNext.
+Built with Next.js 16, React 19, PostgreSQL, and deployed on Railway.
 
 ---
 
@@ -42,8 +42,8 @@ Built with Next.js 16, React 19, PostgreSQL, and deployed on Cloudflare via Open
 | Maps | Leaflet + react-leaflet |
 | Geocoding | Photon by [komoot](https://photon.komoot.io) |
 | Charts | Recharts |
-| Lint/Format | [Ultracite](https://github.com/nicholasgriffintn/ultracite) (Biome) |
-| Deploy | [OpenNext](https://opennext.js.org) → Cloudflare |
+| Lint/Format | [Ultracite](https://www.ultracite.ai/) (Biome) |
+| Deploy | [Railway](https://railway.com) → Railway |
 
 ---
 
