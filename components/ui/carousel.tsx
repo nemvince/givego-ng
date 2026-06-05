@@ -21,12 +21,12 @@ type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;
 type CarouselOptions = UseCarouselParameters[0];
 type CarouselPlugin = UseCarouselParameters[1];
 
-interface CarouselProps {
+type CarouselProps = {
   opts?: CarouselOptions;
   orientation?: "horizontal" | "vertical";
   plugins?: CarouselPlugin;
   setApi?: (api: CarouselApi) => void;
-}
+};
 
 type CarouselContextProps = {
   carouselRef: ReturnType<typeof useEmblaCarousel>[0];
@@ -131,6 +131,7 @@ function Carousel({
         canScrollNext,
       }}
     >
+      {/** biome-ignore lint/a11y/useSemanticElements: we want the roledescriptor */}
       <div
         aria-roledescription="carousel"
         className={cn("relative", className)}

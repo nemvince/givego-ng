@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Fragment } from "react";
+import { type ComponentProps, Fragment } from "react";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -11,6 +11,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { Link } from "@/lib/i18n/navigation";
+import { cn } from "@/lib/utils";
 
 type BreadcrumbItemType = {
   href?: string;
@@ -18,11 +19,22 @@ type BreadcrumbItemType = {
   isTranslationKey?: boolean;
 };
 
-export function BreadcrumbTrail({ items }: { items: BreadcrumbItemType[] }) {
+export function BreadcrumbTrail({
+  items,
+  ...props
+}: {
+  items: BreadcrumbItemType[];
+} & ComponentProps<typeof Breadcrumb>) {
   const t = useTranslations();
 
   return (
-    <Breadcrumb className="mx-auto w-full max-w-5xl px-4 pt-12 pb-2">
+    <Breadcrumb
+      className={cn(
+        props.className,
+        "mx-auto w-full max-w-5xl px-4 pt-12 pb-2"
+      )}
+      {...props}
+    >
       <BreadcrumbList>
         {items.map((item, i) => (
           <Fragment key={item.label}>

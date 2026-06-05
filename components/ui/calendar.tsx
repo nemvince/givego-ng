@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/correctness/noNestedComponentDefinitions: It's a lot easier this way and it's only used here */
 "use client";
 
 import {

@@ -12,13 +12,16 @@ export default async function OrganizationsPage() {
   const t = await getTranslations("organizations");
 
   return (
-    <div className="mx-auto w-full max-w-5xl px-4 py-6">
-      <BreadcrumbTrail
-        items={[
-          { href: "/", isTranslationKey: true, label: "navigation.home" },
-          { isTranslationKey: true, label: "organizations.title" },
-        ]}
-      />
+    <div className="mx-auto w-full max-w-5xl p-6">
+      <div className="flex flex-row items-center justify-between">
+        <BreadcrumbTrail
+          className="w-auto pt-0"
+          items={[
+            { href: "/", isTranslationKey: true, label: "navigation.home" },
+            { isTranslationKey: true, label: "organizations.title" },
+          ]}
+        />
+      </div>
       <Empty className="py-20">
         <EmptyMedia variant="icon">
           <BuildingsIcon className="size-10" />

@@ -26,13 +26,13 @@ export function AppShell({
   children: ReactNode;
 }) {
   return (
-    <div className="flex min-h-svh flex-col">
+    <div className="flex grow flex-col">
       <Navbar
         notifications={notifications}
         session={session}
         unreadCount={unreadCount}
       />
-      <main className="flex-1">{children}</main>
+      <main className="grow">{children}</main>
       <Footer />
     </div>
   );

@@ -209,7 +209,125 @@
   },
   "events": {
     "title": "Events",
-    "comingSoon": "Event listings will be available soon."
+    "comingSoon": "Event listings will be available soon.",
+    "create": {
+      "title": "Create Event",
+      "stepIndicator": "Step {current} of {total}",
+      "steps": {
+        "basicInfo": "Basic Info",
+        "locationTime": "Location & Time",
+        "volunteers": "Volunteer Settings",
+        "review": "Review & Submit"
+      },
+      "basicInfo": {
+        "title": "Basic Information",
+        "description": "Tell volunteers about your event",
+        "titleLabel": "Event title",
+        "titlePlaceholder": "e.g. Beach Cleanup Day",
+        "themeLabel": "Theme / Cause",
+        "themePlaceholder": "e.g. Environmental Protection",
+        "workTypeLabel": "Work type",
+        "workTypePlaceholder": "Select work type",
+        "workTypes": {
+          "physical": "Physical",
+          "social": "Social",
+          "office": "Office"
+        },
+        "descriptionLabel": "Description",
+        "descriptionPlaceholder": "Describe what volunteers will do...",
+        "tagsLabel": "Tags",
+        "tagsPlaceholder": "Select tags...",
+        "tagsEmpty": "No tags available",
+        "minTags": "Select at least one tag"
+      },
+      "locationTime": {
+        "title": "Location & Time",
+        "description": "Where and when does your event take place?",
+        "addressModeLabel": "Address type",
+        "addressModeAutocomplete": "Searchable address (with map)",
+        "addressModeText": "Free-text address (no map)",
+        "addressLabel": "Address",
+        "addressPlaceholder": "Start typing an address...",
+        "addressSearching": "Searching...",
+        "addressNoResults": "No addresses found",
+        "addressTextLabel": "Address",
+        "addressTextPlaceholder": "Enter the event location...",
+        "mapLabel": "Location on map",
+        "mapHint": "Click on the map to adjust the pin",
+        "latLabel": "Latitude",
+        "lngLabel": "Longitude",
+        "startDateLabel": "Start date",
+        "endDateLabel": "End date",
+        "pickDate": "Pick a date",
+        "isRecurringLabel": "This is a recurring event",
+        "weekdaysLabel": "Repeats on",
+        "weekdays": {
+          "mon": "Mon",
+          "tue": "Tue",
+          "wed": "Wed",
+          "thu": "Thu",
+          "fri": "Fri",
+          "sat": "Sat",
+          "sun": "Sun"
+        },
+        "timeslotLabel": "Time slot",
+        "timeslotStart": "Start time",
+        "timeslotEnd": "End time",
+        "addTimeslot": "Add another time slot",
+        "removeTimeslot": "Remove"
+      },
+      "volunteers": {
+        "title": "Volunteer Settings",
+        "description": "Configure how volunteers can help",
+        "helpModeLabel": "Help mode",
+        "helpModes": {
+          "online": "Online",
+          "personal": "In-person",
+          "hybrid": "Hybrid"
+        },
+        "minVolunteersLabel": "Minimum volunteers",
+        "minVolunteersPlaceholder": "No minimum",
+        "maxVolunteersLabel": "Maximum volunteers",
+        "maxVolunteersPlaceholder": "No maximum",
+        "validation": "Minimum cannot exceed maximum"
+      },
+      "review": {
+        "title": "Review & Submit",
+        "description": "Check everything before submitting",
+        "sectionBasic": "Basic Information",
+        "sectionLocation": "Location & Time",
+        "sectionVolunteers": "Volunteer Settings",
+        "imageUpload": "Event image",
+        "imagePlaceholder": "Image upload coming soon",
+        "submit": "Submit for review",
+        "submitting": "Submitting...",
+        "back": "Back to step {step}",
+        "oneTimeEvent": "One-time event",
+        "recurringEvent": "Recurring event",
+        "searchableAddress": "Searchable address",
+        "freeTextAddress": "Free-text address",
+        "noVolunteerLimit": "No limit",
+        "noMinVolunteers": "No minimum",
+        "noMaxVolunteers": "No maximum"
+      },
+      "navigation": {
+        "back": "Back",
+        "next": "Next",
+        "submit": "Submit"
+      },
+      "draft": {
+        "restored": "Draft restored from previous session",
+        "cleared": "Draft cleared"
+      },
+      "unsavedChanges": "You have unsaved changes. Are you sure you want to leave?",
+      "errors": {
+        "serverError": "Something went wrong. Please try again.",
+        "orgRequired": "Only organizations can create events",
+        "endBeforeStart": "End date must be after start date",
+        "minGreaterThanMax": "Minimum volunteers cannot exceed maximum"
+      },
+      "success": "Event created successfully!"
+    }
   },
   "organizations": {
     "title": "Organizations",

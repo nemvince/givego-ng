@@ -7,5 +7,6 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.biome": "explicit",
     "source.organizeImports.biome": "explicit"
-  }
+  },
+  "i18n-ally.localesPaths": ["messages", "lib/i18n"]
 }

@@ -208,7 +208,125 @@
   },
   "events": {
     "title": "Események",
-    "comingSoon": "Az eseménylista hamarosan elérhető lesz."
+    "comingSoon": "Az eseménylista hamarosan elérhető lesz.",
+    "create": {
+      "title": "Esemény létrehozása",
+      "stepIndicator": "Lépés {current} / {total}",
+      "steps": {
+        "basicInfo": "Alapadatok",
+        "locationTime": "Helyszín és idő",
+        "volunteers": "Önkéntes beállítások",
+        "review": "Áttekintés és beküldés"
+      },
+      "basicInfo": {
+        "title": "Alapinformációk",
+        "description": "Mesélj az önkénteseknek az eseményedről",
+        "titleLabel": "Esemény címe",
+        "titlePlaceholder": "pl. Strandtakarítás napja",
+        "themeLabel": "Téma / Ügy",
+        "themePlaceholder": "pl. Környezetvédelem",
+        "workTypeLabel": "Munka típusa",
+        "workTypePlaceholder": "Válassz munkatípust",
+        "workTypes": {
+          "physical": "Fizikai",
+          "social": "Közösségi",
+          "office": "Irodai"
+        },
+        "descriptionLabel": "Leírás",
+        "descriptionPlaceholder": "Írd le, mit fognak csinálni az önkéntesek...",
+        "tagsLabel": "Címkék",
+        "tagsPlaceholder": "Válassz címkéket...",
+        "tagsEmpty": "Nincsenek elérhető címkék",
+        "minTags": "Válassz legalább egy címkét"
+      },
+      "locationTime": {
+        "title": "Helyszín és idő",
+        "description": "Hol és mikor lesz az esemény?",
+        "addressModeLabel": "Cím típusa",
+        "addressModeAutocomplete": "Kereshető cím (térképpel)",
+        "addressModeText": "Szabad szöveges cím (térkép nélkül)",
+        "addressLabel": "Cím",
+        "addressPlaceholder": "Kezdj el gépelni egy címet...",
+        "addressSearching": "Keresés...",
+        "addressNoResults": "Nem található cím",
+        "addressTextLabel": "Cím",
+        "addressTextPlaceholder": "Add meg az esemény helyszínét...",
+        "mapLabel": "Elhelyezkedés a térképen",
+        "mapHint": "Kattints a térképre a jelző módosításához",
+        "latLabel": "Szélesség",
+        "lngLabel": "Hosszúság",
+        "startDateLabel": "Kezdő dátum",
+        "endDateLabel": "Befejező dátum",
+        "pickDate": "Válassz dátumot",
+        "isRecurringLabel": "Ez egy ismétlődő esemény",
+        "weekdaysLabel": "Ismétlődik",
+        "weekdays": {
+          "mon": "Hé",
+          "tue": "Ke",
+          "wed": "Sze",
+          "thu": "Csü",
+          "fri": "Pé",
+          "sat": "Szo",
+          "sun": "Va"
+        },
+        "timeslotLabel": "Idősáv",
+        "timeslotStart": "Kezdés",
+        "timeslotEnd": "Befejezés",
+        "addTimeslot": "Új idősáv hozzáadása",
+        "removeTimeslot": "Eltávolítás"
+      },
+      "volunteers": {
+        "title": "Önkéntes beállítások",
+        "description": "Állítsd be, hogyan segíthetnek az önkéntesek",
+        "helpModeLabel": "Segítségnyújtás módja",
+        "helpModes": {
+          "online": "Online",
+          "personal": "Személyesen",
+          "hybrid": "Hibrid"
+        },
+        "minVolunteersLabel": "Minimum önkéntesek",
+        "minVolunteersPlaceholder": "Nincs minimum",
+        "maxVolunteersLabel": "Maximum önkéntesek",
+        "maxVolunteersPlaceholder": "Nincs maximum",
+        "validation": "A minimum nem haladhatja meg a maximumot"
+      },
+      "review": {
+        "title": "Áttekintés és beküldés",
+        "description": "Ellenőrizz mindent beküldés előtt",
+        "sectionBasic": "Alapinformációk",
+        "sectionLocation": "Helyszín és idő",
+        "sectionVolunteers": "Önkéntes beállítások",
+        "imageUpload": "Esemény képe",
+        "imagePlaceholder": "Képfeltöltés hamarosan",
+        "submit": "Beküldés jóváhagyásra",
+        "submitting": "Beküldés...",
+        "back": "Vissza a(z) {step}. lépéshez",
+        "oneTimeEvent": "Egyszeri esemény",
+        "recurringEvent": "Ismétlődő esemény",
+        "searchableAddress": "Kereshető cím",
+        "freeTextAddress": "Szabad szöveges cím",
+        "noVolunteerLimit": "Nincs korlát",
+        "noMinVolunteers": "Nincs minimum",
+        "noMaxVolunteers": "Nincs maximum"
+      },
+      "navigation": {
+        "back": "Vissza",
+        "next": "Tovább",
+        "submit": "Beküldés"
+      },
+      "draft": {
+        "restored": "Piszkozat visszaállítva az előző munkamenetből",
+        "cleared": "Piszkozat törölve"
+      },
+      "unsavedChanges": "Nem mentett módosításaid vannak. Biztosan elhagyod az oldalt?",
+      "errors": {
+        "serverError": "Valami hiba történt. Kérlek, próbáld újra.",
+        "orgRequired": "Csak szervezetek hozhatnak létre eseményeket",
+        "endBeforeStart": "A befejező dátumnak a kezdő dátum utánnia kell lennie",
+        "minGreaterThanMax": "A minimum önkéntesek nem haladhatják meg a maximumot"
+      },
+      "success": "Esemény sikeresen létrehozva!"
+    }
   },
   "organizations": {
     "title": "Szervezetek",

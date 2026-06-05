@@ -38,9 +38,9 @@ export type ChartConfig = Record<
   )
 >;
 
-interface ChartContextProps {
+type ChartContextProps = {
   config: ChartConfig;
-}
+};
 
 const ChartContext = createContext<ChartContextProps | null>(null);
 
@@ -103,6 +103,7 @@ const ChartStyle = ({ id, config }: { id: string; config: ChartConfig }) => {
 
   return (
     <style
+      // biome-ignore lint/security/noDangerouslySetInnerHtml: recharts
       dangerouslySetInnerHTML={{
         __html: Object.entries(THEMES)
           .map(
@@ -207,6 +208,7 @@ function ChartTooltipContent({
       <div className="grid gap-1.5">
         {payload
           .filter((item) => item.type !== "none")
+          // biome-ignore lint/complexity/noExcessiveCognitiveComplexity: charts are magic anyways
           .map((item, index) => {
             const key = `${nameKey ?? item.name ?? item.dataKey ?? "value"}`;
             const itemConfig = getPayloadConfigFromPayload(config, item, key);
